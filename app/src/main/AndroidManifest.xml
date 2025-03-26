@@ -13,7 +13,7 @@
         android:theme="@style/Theme.ListView"
         tools:targetApi="31">
         <activity
-            android:name=".CustomListView"
+            android:name=".CartActivity"
             android:exported="false" />
         <activity
             android:name=".SimpleListView"

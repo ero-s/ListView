@@ -1,14 +1,14 @@
 package com.example.listview
 
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import android.widget.ListView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class CustomListView : AppCompatActivity() {
+class CartActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -19,9 +19,19 @@ class CustomListView : AppCompatActivity() {
             insets
         }
 
-        val buildList = listOf("Gaming", "Work", "Office")
         val listView = findViewById<ListView>(R.id.lvCartList)
-        val arrayAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, buildList)
+        // set drawwable to something else that makes sensed
+        val cartItems = listOf(
+            CartItem(R.drawable.ic_launcher_background, "Gaming", 100.0),
+            CartItem(R.drawable.ic_launcher_background, "Work", 200.0),
+            CartItem(R.drawable.ic_launcher_background, "Office", 300.0)
+        )
+        val arrayAdapter = CartCustomListViewAdapter(
+            this,
+            cartItems,
+            onClick = {
+                Toast.makeText(this, "Clicked on ${it.name} with price ${it.subTotal}", Toast.LENGTH_SHORT).show()
+            })
         listView.adapter = arrayAdapter
     }
 }

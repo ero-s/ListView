@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnCustom.setOnClickListener(){
-            startActivity( Intent(this, CustomListView::class.java))
+            startActivity( Intent(this, CartActivity::class.java))
         }
     }
 }
