@@ -23,6 +23,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvHeader"
-        app:layout_constraintTop_toBottomOf="@+id/tvHeader" />
+        app:layout_constraintTop_toBottomOf="@+id/tvHeader"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="25dp"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
