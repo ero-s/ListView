@@ -21,7 +21,7 @@ class CartCustomListViewAdapter(
 
     override fun getView(pos: Int, convertView: View?, parent: ViewGroup?): View {
         val view = convertView ?: LayoutInflater.from(context).inflate(
-            R.layout.activity_custom_list_view,
+            R.layout.cart_item_custom_list_view,
             parent,
             false
         )

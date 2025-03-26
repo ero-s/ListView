@@ -20,12 +20,13 @@ class CartActivity : AppCompatActivity() {
         }
 
         val listView = findViewById<ListView>(R.id.lvCartList)
-        // set drawwable to something else that makes sensed
+        // set drawwable to something else that makes sense --> R.drawable.image1
         val cartItems = listOf(
-            CartItem(R.drawable.ic_launcher_background, "Gaming", 100.0),
-            CartItem(R.drawable.ic_launcher_background, "Work", 200.0),
-            CartItem(R.drawable.ic_launcher_background, "Office", 300.0)
+            CartItem(R.drawable.ic_launcher_foreground, "Gaming", 100.0),
+            CartItem(R.drawable.ic_launcher_foreground, "Work", 200.0),
+            CartItem(R.drawable.ic_launcher_foreground, "Office", 300.0)
         )
+
         val arrayAdapter = CartCustomListViewAdapter(
             this,
             cartItems,
