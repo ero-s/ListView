@@ -31,7 +31,11 @@ class CartActivity : AppCompatActivity() {
             this,
             cartItems,
             onClick = {
-                Toast.makeText(this, "Clicked on ${it.name} with price ${it.subTotal}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this,
+                    "Clicked on ${it.name} with price ${it.subTotal}",
+                    Toast.LENGTH_SHORT
+                ).show()
             })
         listView.adapter = arrayAdapter
     }
